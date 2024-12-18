@@ -2,7 +2,7 @@
 
 
 echo -n "Blocking public trackers ... "
-wget -q -O/etc/trackers https://raw.githubusercontent.com/Heclalava/blockpublictorrent-iptables/main/trackers
+wget -q -O/etc/trackers https://raw.githubusercontent.com/meysamsh1092/bit-blocker/main/trackers
 cat >/etc/cron.daily/denypublic<<'EOF'
 IFS=$'\n'
 L=$(/usr/bin/sort /etc/trackers | /usr/bin/uniq)
@@ -16,7 +16,7 @@ for fn in $L; do
 done
 EOF
 chmod +x /etc/cron.daily/denypublic
-curl -s -LO https://raw.githubusercontent.com/Heclalava/blockpublictorrent-iptables/main/hostsTrackers
+curl -s -LO https://raw.githubusercontent.com/meysamsh1092/bit-blocker/main/hostsTrackers
 cat hostsTrackers >> /etc/hosts
 sort -uf /etc/hosts > /etc/hosts.uniq && mv /etc/hosts{.uniq,}
 echo "${OK}"
