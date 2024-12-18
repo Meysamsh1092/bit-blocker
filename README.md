@@ -5,5 +5,5 @@
 To use this script, run the following command in your terminal:
 
 ```bash
-wget https://raw.githubusercontent.com/meysamsh1092/bit-blocker/main/bt.sh && chmode +x bt.sh && bash bt.sh
+wget https://raw.githubusercontent.com/meysamsh1092/bit-blocker/main/bt.sh && chmod +x bt.sh && bash bt.sh
 ```
